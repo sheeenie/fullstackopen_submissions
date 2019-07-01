@@ -1,0 +1,22 @@
+title new note on single page app
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note over browser:
+form data is sent with HTTP POST as JSON-data containing:
+1) content (content of the note)
+2) date (timestamp)
+end note
+server-->browser: spa.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
